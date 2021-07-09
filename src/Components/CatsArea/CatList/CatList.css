@@ -1,3 +1,31 @@
 .CatList {
 	
 }
+
+.CatList img{
+    width: 50px;
+    height: 50px;
+    border: 1px dashed white;
+    margin: 5px;
+}
+
+.CatList table{
+margin: auto;
+}
+.CatList table, th,td{
+border: 1px solid blue;
+}
+.CatList tr:nth-child(even){
+background-color: #E98580;
+}
+.CatList tr:nth-child(odd){
+background-color: #DF5E5E;
+}
+.CatList  th{
+background-color: #FDD2BF;
+color: black;
+}
+.CatList div{
+height: 80%;
+overflow: auto;
+}

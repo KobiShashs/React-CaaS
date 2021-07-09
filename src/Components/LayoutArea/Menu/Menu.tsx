@@ -8,6 +8,8 @@ function Menu(): JSX.Element {
             <br/>
             <NavLink to='/cats' exact>Cats</NavLink>
             <br/>
+            <NavLink to='/cats2' exact>Cats 2</NavLink>
+            <br/>
             <NavLink to='/about' exact>About</NavLink>
         </div>
       

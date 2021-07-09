@@ -25,7 +25,36 @@ class CatList extends Component<{}, CatListState> {
     public render(): JSX.Element {
         return (
             <div className="CatList">
-				{ this.state.cats.map(c=><span key={c.id}>{c.id} - {c.name} - {c.color} - {c.weight} </span>)}
+                {this.state.cats.length}
+                    <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Weight</th>
+                            <th>Color</th>
+                            <th>Image</th>
+                            <th>Actions <button>➕</button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                         
+                                {this.state.cats.map(c=><tr>
+                                    
+                                    <td>{c.id}</td>
+                                    <td>{c.name}</td>
+                                    <td>{c.weight}</td>
+                                    <td>{c.color}</td>
+                                    <td><img src={c.image}/></td>
+                                    <td><button>🗑️</button><button>✏️</button></td>
+                            
+                                    </tr>)}
+                            
+                       
+                        
+                    </tbody>
+                    </table>
             </div>
         );
     }

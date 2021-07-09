@@ -1,0 +1,27 @@
+
+.Card {
+  width: 200px;
+  display: inline-flex;
+  align-items: center;
+  padding-right: 0;
+  color: navy;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg,lightgreen,white);
+  margin: 5px;
+}
+
+.Card img{
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  margin:5px;
+  border: 1px solid black;
+  vertical-align: middle;
+}
+
+.Card >div:nth-child(1){
+  margin-left:20px;
+}
+.Card > div:nth-child(2){
+  margin-left: auto;
+}
