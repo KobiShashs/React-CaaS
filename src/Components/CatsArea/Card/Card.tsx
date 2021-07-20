@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
 import CatModel from "../../../Models/CatModel";
+import globals from "../../../Services/global";
 import "./Card.css";
 
 
@@ -26,7 +27,7 @@ class Card extends Component<CardProps> {
                 </div>
 				<div>
                     <NavLink to={"cats2/details/" + this.props.cat.id}>
-                        <img src={this.props.cat.image} alt={this.props.cat.name}/>
+                        <img src={globals.urls.cats+'images/'+ this.props.cat.image} alt={this.props.cat.name}/>
                     </NavLink>
                     
                 </div>
