@@ -1,0 +1,11 @@
+.EmptyView {
+	
+}
+.EmptyView img {
+    width: 250px;
+  height: 150px;
+  /* border: 1px dashed black; */
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  }

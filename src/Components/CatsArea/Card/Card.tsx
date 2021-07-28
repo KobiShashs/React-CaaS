@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
 import CatModel from "../../../Models/CatModel";
-import globals from "../../../Services/global";
+import globals from "../../../Services/Globals";
 import "./Card.css";
 
 

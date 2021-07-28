@@ -3,6 +3,7 @@ class CatModel {
     public name?:string;
     public weight?: number;
     public color?: string;
+    public birthday?: Date;
     public image? : string;
 }
 

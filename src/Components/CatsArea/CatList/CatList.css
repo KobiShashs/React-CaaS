@@ -1,31 +1,39 @@
 .CatList {
-	
 }
 
-.CatList img{
-    width: 50px;
-    height: 50px;
-    border: 1px dashed white;
-    margin: 5px;
+.Img {
+  width: 50px;
+  height: 50px;
+  border: 1px dashed black;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
 }
 
-.CatList table{
-margin: auto;
+.CatList table {
+  margin: auto;
+  border-collapse: collapse;
+  width:100%;
 }
-.CatList table, th,td{
-border: 1px solid blue;
+.CatList table,th,td {
+  border: 1px solid black;
 }
-.CatList tr:nth-child(even){
-background-color: #E98580;
+.CatList tr:nth-child(even) {
+  background-color: white;
 }
-.CatList tr:nth-child(odd){
-background-color: #DF5E5E;
+.CatList tr:nth-child(odd) {
+  background-color: #ddd;
 }
-.CatList  th{
-background-color: #FDD2BF;
-color: black;
+.CatList th {
+  background-color: #04aa6d;
+  color: white;
 }
-.CatList div{
+
+.CatList td {
+  color: black;
+  /* border: none; */
+}
+/* .CatList div{
 height: 80%;
 overflow: auto;
-}
+} */

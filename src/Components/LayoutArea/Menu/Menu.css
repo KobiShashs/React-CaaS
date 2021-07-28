@@ -1,3 +1,19 @@
-.Menu {
-	
+.Menu > nav {
+	display: flex;
+    flex-direction: column;
+}
+
+.Menu > nav  {
+    margin-top: 20px;
+    color: navy;
+    font-style: bold;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.Menu .active  {
+    color: navy;
+    font-style: bold;
+    font-size: x-large;
+    text-decoration: none;
 }

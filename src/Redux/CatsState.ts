@@ -6,9 +6,16 @@ export class CatsAppState {
     public cats: CatModel[] = [];
 }
 
-//Step 2 - Define ActionType using enum for all required operations
+
+// Step 2 - Define ActionType using enum for all required operations
+// export enum CatsActionType {
+//     CatsDownloaded,
+//     CatAdded,
+//     CatUpdated,
+//     CatDeleted
+// }
 export enum CatsActionType {
-    CatsDownloaded= "CatsDownloaded",
+    CatsDownloaded = "CatsDownloaded",
     CatAdded = "CatAdded",
     CatUpdated = "CatUpdated",
     CatDeleted = "CatDeleted"
@@ -24,6 +31,7 @@ export interface CatAction {
 export function catsDownloadedAction(cats: CatModel[]): CatAction {
     return { type: CatsActionType.CatsDownloaded, payload: cats };
 }
+
 export function catsAddedAction(cat: CatModel): CatAction {
     return { type: CatsActionType.CatAdded, payload: cat };
 }
@@ -33,29 +41,30 @@ export function catsUpdatedAction(cat: CatModel): CatAction {
 }
 
 export function catsDeletedAction(id:number): CatAction {
-    return { type: CatsActionType.CatDeleted, payload: id };
+    return { type: CatsActionType.CatUpdated, payload: id };
 }
 
 // Step 5 - Reducer function perform the required action
 export function catsReducer(currentState: CatsAppState = new CatsAppState(),action:CatAction): CatsAppState{
-    
+    // const newState = new CatsAppState();
+    // newState.cats = currentState.cats;
+
     const newState = {...currentState} //Spread Operator
-    
-    switch (action.type) {
+    switch(action.type){
         case CatsActionType.CatsDownloaded:
             newState.cats = action.payload;
             break;
         case CatsActionType.CatAdded:
             newState.cats.push(action.payload);
             break;
-
         case CatsActionType.CatUpdated:
-            break;
-        case CatsActionType.CatDeleted:
-            newState.cats = newState.cats.filter(c=>c.id !== action.payload);
-            break;
-        
+            //  const idx = newState.cats.filter(c => c.id === action.payload.id);
+            //  newState.cats[idx]=action.payload;    
+            break
+            case CatsActionType.CatDeleted:
+                newState.cats = newState.cats.filter(c=>c.id !== action.payload);
+                break
     }
-
     return newState;
+    
 }

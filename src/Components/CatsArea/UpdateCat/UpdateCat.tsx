@@ -1,3 +1,4 @@
+import "./UpdateCat.css";
 import axios from "axios";
 import { Component } from "react";
 import { NavLink, RouteComponentProps } from "react-router-dom";
@@ -7,21 +8,20 @@ import globals from "../../../Services/Globals";
 import notify from "../../../Services/Notification";
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
-import "./CatDetails.css";
 import EmptyView from "../../SharedArea/EmptyView/EmptyView";
 
 interface RouteParam {
   id: string;
 }
 
-interface CatDetailsProps extends RouteComponentProps<RouteParam> {}
+interface UpdateCatProps extends RouteComponentProps<RouteParam> {}
 
-interface CatDetailsState {
+interface UpdateCatState {
   cat: CatModel;
 }
 
-class CatDetails extends Component<CatDetailsProps, CatDetailsState> {
-  public constructor(props: CatDetailsProps) {
+class UpdateCat extends Component<UpdateCatProps, UpdateCatState> {
+  public constructor(props: UpdateCatProps) {
     super(props);
     this.state = {
       cat: null,
@@ -54,14 +54,18 @@ class CatDetails extends Component<CatDetailsProps, CatDetailsState> {
 
   public render(): JSX.Element {
     return (
-      <div className="CatDetails Box">
+      <div className="UpdateCat Box">
         {!this.state.cat && <EmptyView msg="No cat for you!" />}
         {this.state.cat && (
           <>
             {" "}
-            <h2>Details</h2>
+            <h2>Update Cat</h2>
             <EditIcon />
             <DeleteIcon></DeleteIcon>
+
+            <form>
+
+            </form>
             <h3>Name: {this.state.cat.name}</h3>
             <h3>Weight: {this.state.cat.weight}</h3>
             <h3>Color: {this.state.cat.color}</h3>
@@ -75,4 +79,11 @@ class CatDetails extends Component<CatDetailsProps, CatDetailsState> {
     );
   }
 }
-export default CatDetails;
+export default UpdateCat;
+
+
+
+
+
+
+

@@ -1,7 +1,30 @@
 .AddCat {
-	
+	align-items: center;
 }
 
 .AddCat span{
     color:tomato;
+}
+
+
+.AddCat input{
+    
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.AddCat button{
+    
+    margin: 10px 0;
+    width: 100%;
+
+
+}
+
+
+
+.AddCat > form{
+    text-align: left;
+    align-items: flex-start;
 }
